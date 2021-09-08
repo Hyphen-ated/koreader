@@ -231,15 +231,8 @@ function Gestures:genMenu(ges)
 end
 
 function Gestures:genSubItem(ges, separator, hold_callback)
-    local reader_only = {tap_top_left_corner=true, hold_top_left_corner=true,
-                         tap_top_right_corner=true,}
-    local enabled_func
-    if reader_only[ges] then
-       enabled_func = function() return self.ges_mode == "gesture_reader" end
-    end
     return {
         text_func = function() return self:gestureTitleFunc(ges) end,
-        enabled_func = enabled_func,
         sub_item_table = self:genMenu(ges),
         separator = separator,
         hold_callback = hold_callback,

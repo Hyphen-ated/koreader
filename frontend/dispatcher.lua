@@ -91,6 +91,10 @@ local settingsList = {
 
     -- filemanager settings
     folder_up = {category="none", event="FolderUp", title=_("Folder up"), filemanager=true},
+    first_page_files = {category="none", event="FirstPage", title=_("First page"), filemanager=true, paging=true},
+    prev_page_files = {category="none", event="PrevPage", title=_("Previous page"), filemanager=true, paging=true},
+    next_page_files = {category="none", event="NextPage", title=_("Next page"), filemanager=true, paging=true},
+    last_page_files = {category="none", event="LastPage", title=_("Last page"), filemanager=true, paging=true},
     show_plus_menu = {category="none", event="ShowPlusMenu", title=_("Show plus menu"), filemanager=true},
     refresh_content = {category="none", event="RefreshContent", title=_("Refresh content"), filemanager=true},
     folder_shortcuts = {category="none", event="ShowFolderShortcutsDialog", title=_("Folder shortcuts"), filemanager=true, separator=true},
@@ -219,6 +223,10 @@ local dispatcher_menu_order = {
 
     -- filemanager
     "folder_up",
+    "first_page_files",
+    "prev_page_files",
+    "next_page_files",
+    "last_page_files",
     "show_plus_menu",
     "refresh_content",
     "folder_shortcuts",
